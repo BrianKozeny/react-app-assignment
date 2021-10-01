@@ -4,22 +4,21 @@ import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 
-function Input_bar() {
+const InputBar = (props) => {
 
-   function  handleInputChange(e) {
-        setInputValue(e.target.value);
+    function  handleInputChange(e) {
+        props.setInputValue(e.target.value);
     }
 
-    const [inputValue, setInputValue] = useState("");
 
-    console.log(inputValue)
+    console.log(props.inputValue)
 
 
     return(
         <>
             <Grid container direction="row" alignItems="center" justifyContent="center">
                 <Box display="flex" justifyContent="center" alignItems="center" sx={{width: 500, maxWidth:'100%',}}>
-                    <TextField fullWidth label="Type new item" value={inputValue} onChange={handleInputChange}  id="fullWidth" />
+                    <TextField fullWidth label="Type new item" value={props.inputValue} onChange={handleInputChange}  id="fullWidth" />
                     <Box p={1}>
                         <Button type="submit" sx={{width: 95, height: 50, }} orientaion="horizontal" display="flex" style={{ fontSize: '12px' }} variant="contained">Add item</Button>
                     </Box>
@@ -29,4 +28,4 @@ function Input_bar() {
     )
 }
 
-export default Input_bar;
+export default InputBar;

@@ -1,19 +1,27 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import Header from './header_component.jsx';
-import Input_bar from './input_component.jsx';
+import InputBar from './input_component.jsx';
 import './App.css';
 
 function App() {
-  return (
-      <div>
+    
+    const [inputValue, setInputValue] = useState("");
+    const [items, setItems] = useState([]);
+        
+    return (
         <div>
-            <Header />
+            <div>
+                <Header />
+            </div>
+            <div>
+                <InputBar 
+                    inputValue = { inputValue }
+                    setInputValue = { setInputValue }
+                />
+            </div>
         </div>
-        <div>
-            <Input_bar />
-        </div>
-      </div>
-  );
+    );
 }
 
 export default App;
