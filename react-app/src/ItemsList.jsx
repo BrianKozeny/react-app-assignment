@@ -5,8 +5,18 @@ import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import Button from '@mui/material/Button';
 
 const  ItemList = (props) => {
+
+    const handleRemove = (id) => {
+        const newList = props.items.filter((items) => items.id !== id);
+
+        props.setItems(newList);
+
+        console.log(id);
+    }
+
     return(
         <>
             <Grid container direction="row" alignItems="center" justifyContent="center">
@@ -16,6 +26,7 @@ const  ItemList = (props) => {
                             <ListItem key={item.id}>
                                 <Box display="flex" bgcolor="secondary.main" sx={{width: 500, maxWidth:'100%',}}>
                                     <ListItemText sx={{textAlign: 'center' }}> {item.value} </ListItemText>
+                                    <Button onClick={() => handleRemove(item.id)}>Delete</Button>
                                 </Box>
                             </ListItem>
                         ))}

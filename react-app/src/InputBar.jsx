@@ -22,14 +22,13 @@ const InputBar = (props) => {
     console.log(props)
     console.log(props.inputValue)
 
-
     return(
         <>
             <Grid container direction="row" alignItems="center" justifyContent="center">
                 <Box display="flex" justifyContent="center" alignItems="center" sx={{width: 500, maxWidth:'100%',}}>
-                    <TextField fullWidth label="Type new item" value={props.inputValue} onChange={handleInputChange}  id="fullWidth" />
+                    <TextField fullWidth label="Add New Item" value={props.inputValue} onChange={handleInputChange}  id="fullWidth" />
                     <Box p={1}>
-                        <Button sx={{width: 95, height: 50, }} value={props.inputValue} onClick={addItems} orientaion="horizontal" display="flex" style={{ fontSize: '12px' }} variant="contained">Add item</Button>
+                        <Button sx={{width: 95, height: 50, }} value={props.inputValue} onClick={addItems} orientaion="horizontal" display="flex" style={{ fontSize: '12px' }} variant="contained">Add Item</Button>
                     </Box>
                 </Box>
             </Grid>
