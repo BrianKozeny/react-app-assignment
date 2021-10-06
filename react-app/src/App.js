@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import Header from './Header';
 import InputBar from './InputBar';
 import ItemList from './ItemsList';

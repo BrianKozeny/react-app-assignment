@@ -24,13 +24,13 @@ const  ItemList = (props) => {
                 <Box  sx={{ width: 400,}}>
                     <ListItemText  sx={{ ml: 2, display: "flex",  justifyContent: "center" }}><h3>My Items ({props.counter})</h3></ListItemText>
                 </Box>
-                    <Box sx={{display: "flex", justifyContent: "center", alignItems: "center", width: 400, maxWidth:'100%',}}>
+                    <Box sx={{display: "flex", justifyContent: "center", alignItems: "center", width: 400, maxWidth:"100%",}}>
                         <List>
                             {props.items.map(item => (
                                 <ListItem key={item.id}>
-                                    <Box sx={{display: "flex", bgcolor: "secondary.main", width: 400, maxWidth:'100%', backgroundColor: "#c28ea0"}}>
-                                        <ListItemText sx={{textAlign: 'start-left', ml: 2 }} style={{ color: '#ffffff'}}> {item.value} </ListItemText>
-                                        <Button onClick={() => handleRemove(item.id)} style={{ color: '#000000'}}>X</Button>
+                                    <Box sx={{display: "flex", bgcolor: "secondary.main", width: 400, maxWidth:"100%", backgroundColor: "#c28ea0"}}>
+                                        <ListItemText sx={{textAlign: "start-left", ml: 2 }} style={{ color: "#ffffff"}}> {item.value} </ListItemText>
+                                        <Button onClick={() => handleRemove(item.id)} style={{ color: "#000000"}}>X</Button>
                                     </Box>
                                 </ListItem>
                             ))}
