@@ -16,10 +16,6 @@ const InputBar = (props) => {
       },
     ])
 
-  console.log(addItems)
-  console.log(props)
-  console.log(props.inputValue)
-
   return (
     <Grid
       container
